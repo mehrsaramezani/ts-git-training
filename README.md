@@ -38,7 +38,7 @@ Tests are always supposed to be right and you should not need to edit them at an
 
 The goal state of this exercise is a `main` branch that contains all of the features that are currently split onto separate feature branches. **You should not have to write or modify any code outside of the merge conflict resolution process.**
 
-To get familiar with git and remote git repositories, there are several different approaches you can take to resolving these conflicts. I'd recommend working through them in order - the first one is the most refective of the process that we'll use on the project, but the others are great practice.
+To get familiar with git and remote git repositories, there are several different approaches you can take to resolving these conflicts. I'd recommend working through them in order - the first one is the most refective of the standard development process on a multi-developer project, but the others are great practice.
 
 Before starting to resolve the conflicts on each branch, it's a good idea to take a look through the changes and make sure you understand how the new code and test(s) on the branch work.
 
@@ -47,9 +47,9 @@ Before starting to resolve the conflicts on each branch, it's a good idea to tak
     - Most of the time, it won't let you merge it because of a conflict
     - Locally, pull an up-to-date version of `main` and rebase the feature branch on top of it, resolving any conflicts as they arise
     - Force push your feature branch. It should now be possible to merge the PR that you previously created
-        - **Note:** Force pushing is quite dangerous, and you shouldn't get into the habit of doing it other than for this specific case where a branch has been rebased and you need to update the remove version. On our project, the `main` branch will be protected against force pushing.
+        - **Note:** Force pushing is quite dangerous, and you shouldn't get into the habit of doing it other than for this specific case where a branch has been rebased and you need to update the remove version. In many remote repositories, the `main`/`master` branch is protected against force pushing for this reason.
 2. Without using GitHub, get all of the features on to the `main` branch only using `git merge` commands.
-3. Without using GitHub, get all of the features on to the `main` branch only using `git rebase` commands.
+3. Without using GitHub, get all of the features onto a single branch only using `git rebase` commands (this branch doesn't have to be `main`).
 
 After each run-through, you will want to revert your repository back to its starting state. You might want to explore ways of doing this (without re-forking the original repo), for example:
 
